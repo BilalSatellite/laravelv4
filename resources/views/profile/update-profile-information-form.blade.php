@@ -9,13 +9,11 @@
 
     <x-slot name="form">
 
-        <x-jet-action-message on="saved">
-            {{ __('Saved.') }}
-        </x-jet-action-message>
+        
 
         <!-- Profile Photo -->
         @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-            <div class="mb-3" x-data="{photoName: null, photoPreview: null}">
+            <div class="" x-data="{photoName: null, photoPreview: null}">
                 <!-- Profile Photo File Input -->
                 <input type="file" hidden
                        wire:model="photo"
@@ -78,9 +76,14 @@
 
     <x-slot name="actions">
 		<div class="d-flex align-items-baseline">
+            <x-jet-action-message on="saved">
+                {{ __('Saved.') }}
+            </x-jet-action-message>
+            
 			<x-jet-button>
                 <div wire:loading class="spinner-border spinner-border-sm" role="status">
                     <span class="visually-hidden">Loading...</span>
+                   
                 </div>
 
 				{{ __('Save') }}

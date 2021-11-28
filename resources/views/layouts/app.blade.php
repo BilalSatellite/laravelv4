@@ -1,179 +1,151 @@
-{{-- <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+ {{-- <!DOCTYPE html>
+ <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+ <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+     <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
-        @livewireStyles
-
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
-    </head>
-    <body class="font-sans hold-transition dark-skin sidebar-mini theme-primary fixed">
-        <div class="wrapper">
-        <x-jet-banner />
-        @livewire('navigation-menu')
-
-        <!-- Page Heading -->
-        <header class="d-flex py-3 bg-white shadow-sm border-bottom">
-            <div class="container">
-                {{ $header }}
-            </div>
-        </header>
-
-        <!-- Page Content -->
-        <div class="content-wrapper">
-            <div class="container-full">
-            {{ $slot }}
-        </div>
-    </div>
-    <!-- /.content-wrapper -->
-
-        @stack('modals')
-
-        @livewireScripts
-
-        @stack('scripts')
-    </div><!-- ./wrapper -->
-    </body>
-</html> --}}
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    {{-- <link rel="icon" href="../images/favicon.ico"> --}}
+     <!-- Fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
 
      <!-- Styles -->
-     <link rel="stylesheet" href="{{ asset('panel/css/style.css') }}">
-
-
-     <link rel="stylesheet" href="{{ asset('panel/css/skin_color.css') }}">
-     <link rel="stylesheet" href="{{ asset('panel/css/animate.css') }}">
      <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
      @livewireStyles
 
      <!-- Scripts -->
      <script src="{{ asset('js/app.js') }}" defer></script>
+ </head>
+
+ <body class="font-sans hold-transition dark-skin sidebar-mini theme-primary fixed">
+     <div class="wrapper">
+         <x-jet-banner />
+         @livewire('navigation-menu')
 
 
-  </head>
 
-<body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
+         <!-- Page Heading -->
+         <header class="d-flex py-3 bg-white shadow-sm border-bottom">
+             <div class="container">
 
-<div class="wrapper">
+                 {{ $header }}
+             </div>
+         </header>
 
-  <header class="main-header">
-    <!-- Header Navbar -->
-    <nav class="navbar navbar-static-top pl-30">
-      <!-- Sidebar toggle button-->
-	  <div>
-		  <ul class="nav">
-			<li class="btn-group nav-item">
-				<a href="#" class="waves-effect waves-light nav-link rounded svg-bt-icon" data-toggle="push-menu" role="button">
-					<i class="nav-link-icon mdi mdi-menu"></i>
-			    </a>
-			</li>
-			<li class="btn-group nav-item">
-				<a href="#" data-provide="fullscreen" class="waves-effect waves-light nav-link rounded svg-bt-icon" title="Full Screen">
-					<i class="nav-link-icon mdi mdi-crop-free"></i>
-			    </a>
-			</li>
+         <!-- Page Content -->
+         <div class="content-wrapper">
+             <div class="container-full">
+                 {{ $slot }}
+             </div>
+         </div>
+         <!-- /.content-wrapper -->
 
-		  </ul>
-	  </div>
+         @stack('modals')
 
-      <div class="navbar-custom-menu r-side">
-        <ul class="nav navbar-nav">
-		  <!-- full Screen -->
-	      <li class="search-bar">
-			  <div class="lookup lookup-circle lookup-right">
-			     <input type="text" name="s">
-			  </div>
-		  </li>
+         @livewireScripts
+
+         @stack('scripts')
+     </div><!-- ./wrapper -->
+ </body>
+
+ </html> --}}
 
 
-	      <!-- User Account-->
-          <li class="dropdown user user-menu">
-			<a href="#" class="waves-effect waves-light rounded dropdown-toggle p-0" data-toggle="dropdown" title="User">
-				<img src="../images/avatar/1.jpg" alt="">
-			</a>
-			<ul class="dropdown-menu animated flipInX">
-			  <li class="user-body">
-				 <a class="dropdown-item" href="#"><i class="ti-user text-muted mr-2"></i> Profile</a>
-				 <a class="dropdown-item" href="#"><i class="ti-wallet text-muted mr-2"></i> My Wallet</a>
-				 <a class="dropdown-item" href="#"><i class="ti-settings text-muted mr-2"></i> Settings</a>
-				 <div class="dropdown-divider"></div>
-				 <a class="dropdown-item" href="#"><i class="ti-lock text-muted mr-2"></i> Logout</a>
-			  </li>
-			</ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+ <!DOCTYPE html>
+ <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+ <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <!-- Primary Meta Tags -->
+     <title>{{ config('app.name', 'Laravel') }}</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="csrf-token" content="{{ csrf_token() }}">
+     <!-- OPTIONAL LINKS -->
 
-  <!-- Left side column. contains the logo and sidebar -->
-   <x-panel.mainSidebar/>
+     <!-- Google Font: Source Sans Pro -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-	  <div class="container-full">
+     <!-- overlayScrollbars -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars@1.13.1/css/OverlayScrollbars.min.css" integrity="sha256-WKijf8KI68sbq8Znd6yMepIuFF0wdWfIt6gk3JWcQfk=" crossorigin="anonymous">
 
-		<!-- Main content -->
-        @isset($header)
-        {{ $header }}
-        @endisset
-        {{ $slot }}
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
 
-		<!-- /.content -->
-	  </div>
-  </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="pull-right d-none d-sm-inline-block">
-        <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
-		  <li class="nav-item">
-			<a class="nav-link" href="javascript:void(0)">FAQ</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="#">Purchase Now</a>
-		  </li>
-		</ul>
-    </div>
-	  &copy; 2020 <a href="#">Psd to Html Expert</a>. All Rights Reserved.
-  </footer>
+     <!-- REQUIRED LINKS -->
+
+     <!-- Theme style -->
+     <link rel="stylesheet" href="{{ asset('panel/css/adminlte.css') }}">
+
+     <link rel="stylesheet" href="{{ asset('panel/css/adminlte-dark-addon.css') }}">
+
+     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+     <!-- Styles -->
+     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+     <!-- Scripts -->
+     <script src="{{ asset('js/app.js') }}" defer></script>
+
+     @livewireStyles
+ </head>
+
+ <body class="layout-fixed dark-mode">
+     <div class="wrapper">
+         <!-- Navbar -->
+         @livewire('navigation-menu')
+         <!-- /.navbar -->
 
 
-<!-- Vendor JS -->
-<script src="{{ asset('panel/js/vendors.min.js') }}"></script>
+         <!-- Main Sidebar Container -->
+         <x-panel.mainSidebar/>
+         <!-- Main content -->
+         <main class="content-wrapper">
+             <div class="content-header">
+                 <div class="container-fluid">
+                     <div class="row mb-2">
+                         <div class="col-sm-6">
+                            {{ $header }}
+                         </div>
+                         <div class="col-sm-6">
+                             <ol class="breadcrumb float-sm-end">
+                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                 <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                             </ol>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="content">
+                 <div class="container-fluid">
+                     <!-- Small boxes (Stat box) -->
+                     {{ $slot }}
+                 </div>
+                 <!-- /.container-fluid -->
+             </div>
+         </main>
+         <!-- /.content-wrapper -->
 
+         <!-- Main Footer -->
+         <footer class="main-footer">
+             <!-- To the end -->
+             <div class="float-end d-none d-sm-inline">
+                 Anything you want
+             </div>
+             <!-- Default to the start -->
+             <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+         </footer>
+    
 
-<!-- Sunny Admin App -->
- <script src="{{ asset('panel/js/template.js') }}"></script>
-{{-- <script src="js/pages/dashboard.js"></script> --}}
+           <!-- overlayScrollbars -->
+     <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@1.13.1/js/OverlayScrollbars.min.js"></script>
+     <!-- AdminLTE App -->
+     <script src="{{ asset('panel/js/adminlte.js') }}"></script>
+     @stack('modals')
 
-  @stack('modals')
+     @livewireScripts
 
-  @livewireScripts
+     @stack('scripts')
+     </div><!--  ./wrapper -->
+ </body>
 
-  @stack('scripts')
-</div>
-<!-- ./wrapper -->
-</body>
-</html>
+ </html>

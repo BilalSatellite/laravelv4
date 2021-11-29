@@ -17,6 +17,9 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="bg-light font-sans antialiased">
+         <!-- Navbar -->
+         @livewire('navigation-menu')
+         <!-- /.navbar -->
         {{ $slot }}
     </body>
 </html>

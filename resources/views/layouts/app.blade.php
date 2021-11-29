@@ -71,28 +71,29 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars@1.13.1/css/OverlayScrollbars.min.css" integrity="sha256-WKijf8KI68sbq8Znd6yMepIuFF0wdWfIt6gk3JWcQfk=" crossorigin="anonymous">
 
      <!-- Font Awesome -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+     {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"> --}}
 
      <!-- REQUIRED LINKS -->
 
-     <!-- Theme style -->
-     <link rel="stylesheet" href="{{ asset('panel/css/adminlte.css') }}">
 
-     <link rel="stylesheet" href="{{ asset('panel/css/adminlte-dark-addon.css') }}">
 
      <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
      <!-- Styles -->
      <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+     <!-- Theme style -->
+     <link rel="stylesheet" href="{{ asset('panel/css/adminlte.css') }}">
+
      <!-- Scripts -->
+     <link rel="stylesheet" href="{{ asset('panel/css/adminlte-dark-addon.css') }}">
      <script src="{{ asset('js/app.js') }}" defer></script>
 
      @livewireStyles
  </head>
 
- <body class="layout-fixed dark-mode">
+ <body class="dark-mode layout-fixed">
      <div class="wrapper">
          <!-- Navbar -->
-         @livewire('navigation-menu')
+         <x-panel.panelNavbar/>
          <!-- /.navbar -->
 
 
@@ -116,7 +117,7 @@
                  </div>
              </div>
              <div class="content">
-                 <div class="container-fluid">
+                 <div class="container-fluid ">
                      <!-- Small boxes (Stat box) -->
                      {{ $slot }}
                  </div>
@@ -134,7 +135,7 @@
              <!-- Default to the start -->
              <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
          </footer>
-    
+
 
            <!-- overlayScrollbars -->
      <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@1.13.1/js/OverlayScrollbars.min.js"></script>

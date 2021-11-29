@@ -9,7 +9,7 @@
         @livewire('profile.update-profile-information-form')
 
         <x-jet-section-border />
-        
+
         @endif
 
         @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::updatePasswords()))
@@ -51,7 +51,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Accunt Setting
+                Chang Password
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -102,7 +102,7 @@
               </div>
             </div>
           </div>
-          
-        
+
+
     </div>
 </x-app-layout>

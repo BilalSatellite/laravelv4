@@ -12137,8 +12137,8 @@ textarea.form-control-lg {
 }
 @media (min-width: 576px) {
   .navbar-nav > .user-menu > .dropdown-menu > .user-body a {
-    background-color: #fff !important;
-    color: #495057 !important;
+    /* background-color: #fff !important; */
+    color: #fff !important;
   }
 }
 .navbar-nav > .user-menu > .dropdown-menu > .user-footer {

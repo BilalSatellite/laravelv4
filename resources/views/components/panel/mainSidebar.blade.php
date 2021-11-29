@@ -4,210 +4,54 @@
             <img src="{{ asset('images/user-info.jpg') }}" alt="AdminLTE Logo" class="brand-image opacity-80 shadow">
             <span class="brand-text fw-light" >SATELLITE</span>
         </a>
-        <a class="pushmenu mx-1" data-lte-toggle="sidebar-mini" href="javascript:;" role="button"><i class="fas fa-angle-double-left"></i></a>
+        <a class="pushmenu mx-1" data-lte-toggle="sidebar-mini" href="javascript:;" role="button"><x-ui.icon class="bi-arrow-left-circle"/></a>
     </div>
     <!-- Sidebar -->
     <div class="sidebar">
         <nav class="mt-2">
             <!-- Sidebar Menu -->
             <ul class="nav nav-pills nav-sidebar flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
-                <li class="nav-item menu-open">
-                    <a href="javascript:;" class="nav-link active">
-                        <i class="nav-icon fas fa-circle"></i>
-                        <p>
-                            Dashboard
-                            <i class="end fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="./index.html" class="nav-link active">
-                                <i class="nav-icon far fa-circle"></i>
-                                <p>Dashboard v1</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./index2.html" class="nav-link ">
-                                <i class="nav-icon far fa-circle"></i>
-                                <p>Dashboard v2</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./index3.html" class="nav-link ">
-                                <i class="nav-icon far fa-circle"></i>
-                                <p>Dashboard v3</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item ">
-                    <a href="javascript:;" class="nav-link ">
-                        <i class="nav-icon fas fa-circle"></i>
-                        <p>
-                            Widgets
-                            <i class="end fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="./pages/widgets/small-box.html" class="nav-link ">
-                                <i class="nav-icon far fa-circle"></i>
-                                <p>Small Box</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./pages/widgets/info-box.html" class="nav-link ">
-                                <i class="nav-icon far fa-circle"></i>
-                                <p>info Box</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./pages/widgets/cards.html" class="nav-link ">
-                                <i class="nav-icon far fa-circle"></i>
-                                <p>Cards</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+                <x-jet-nav-link href="{{ route('dashboard') }}" class="nav-item" :active="request()->routeIs('dashboard')">
+                    <x-ui.icon class="nav-icon bi-speedometer"/>
+                    <p>{{ __('Dashboard') }}</p>
+                </x-jet-nav-link>
+                <x-jet-nav-link href="{{ route('profile.show') }}" class="nav-item" :active="request()->routeIs('profile.show')">
+                    <x-ui.icon class="nav-icon bi-person-circle"/>
+                    <p>{{ __('My Profile') }}</p>
+                </x-jet-nav-link>
+                <!-- Dropdown Menu-->
+                <x-jet-dropdown id="mainsidebare">
+                    <x-slot name="trigger">
+                            <x-ui.icon class="nav-icon bi-people"/>
+                            <p> MULTI LEVEL
+                                <x-ui.icon class="end bi-caret-left-fill"/>
+                            </p>
+                    </x-slot>
+                    <x-slot name="content" class="nav nav-treeview">
+                        <x-jet-nav-link href="{{ route('profile.show') }}">
+                            <x-ui.icon class="nav-icon bi-person-circle"/>
+                            <p>{{ __('My Profile') }}</p>
+                        </x-jet-nav-link>
 
-                <li class="nav-item ">
-                    <a href="javascript:;" class="nav-link ">
-                        <i class="nav-icon fas fa-circle"></i>
-                        <p>
-                            Layout Options
-                            <span class="badge bg-info float-end me-3">6</span>
-                            <i class="end fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="./pages/layout/fixed-sidebar.html" class="nav-link ">
-                                <i class="nav-icon far fa-circle"></i>
-                                <p>Fixed Sidebar</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item ">
-                    <a href="javascript:;" class="nav-link ">
-                        <i class="nav-icon fas fa-circle"></i>
-                        <p>
-                            Forms
-                            <i class="end fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="./pages/forms/general.html" class="nav-link ">
-                                <i class="nav-icon far fa-circle"></i>
-                                <p>General Elements</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item ">
-                    <a href="javascript:;" class="nav-link ">
-                        <i class="nav-icon fas fa-circle"></i>
-                        <p>
-                            Tables
-                            <i class="end fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="./pages/tables/simple.html" class="nav-link ">
-                                <i class="nav-icon far fa-circle"></i>
-                                <p>Simple Tables</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-header">MULTI LEVEL EXAMPLE</li>
-                <li class="nav-item">
-                    <a href="javascript:;" class="nav-link">
-                        <i class="nav-icon fas fa-circle"></i>
-                        <p>Level 1</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="javascript:;" class="nav-link">
-                        <i class="nav-icon fas fa-circle"></i>
-                        <p>
-                            Level 1
-                            <i class="end fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="javascript:;" class="nav-link">
-                                <i class="nav-icon far fa-circle"></i>
-                                <p>Level 2</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="javascript:;" class="nav-link">
-                                <i class="nav-icon far fa-circle"></i>
-                                <p>
-                                    Level 2
-                                    <i class="end fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="javascript:;" class="nav-link">
-                                        <i class="nav-icon far fa-dot-circle"></i>
-                                        <p>Level 3</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="javascript:;" class="nav-link">
-                                        <i class="nav-icon far fa-dot-circle"></i>
-                                        <p>Level 3</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="javascript:;" class="nav-link">
-                                        <i class="nav-icon far fa-dot-circle"></i>
-                                        <p>Level 3</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="javascript:;" class="nav-link">
-                                <i class="nav-icon far fa-circle"></i>
-                                <p>Level 2</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="javascript:;" class="nav-link">
-                        <i class="nav-icon fas fa-circle"></i>
-                        <p>Level 1</p>
-                    </a>
-                </li>
-                <li class="nav-header">LABELS</li>
-                <li class="nav-item">
-                    <a href="javascript:;" class="nav-link">
-                        <i class="nav-icon far fa-circle text-danger"></i>
-                        <p class="text">Important</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="javascript:;" class="nav-link">
-                        <i class="nav-icon far fa-circle text-warning"></i>
-                        <p>Warning</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="javascript:;" class="nav-link">
-                        <i class="nav-icon far fa-circle text-info"></i>
-                        <p>Informational</p>
-                    </a>
-                </li>
+                        <x-jet-nav-link href="{{ route('profile.show') }}">
+                            <x-ui.icon class="nav-icon bi-person-circle"/>
+                            <p>{{ __('My Profile') }}</p>
+                        </x-jet-nav-link>
+
+                        <x-jet-nav-link href="{{ route('profile.show') }}">
+                            <x-ui.icon class="nav-icon bi-person-circle"/>
+                            <p>{{ __('My Profile') }}</p>
+                        </x-jet-nav-link>
+
+                    </x-slot>
+                </x-jet-dropdown>
+
+
+
+                <li class="nav-header"><x-ui.icon class="nav-icon bi-tags-fill"/> Lable</li>
             </ul>
         </nav>
     </div>
     <!-- /.sidebar -->
 </aside>
+

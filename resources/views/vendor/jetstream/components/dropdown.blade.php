@@ -1,11 +1,11 @@
 @props(['id'])
 
-<li class="nav-item dropdown">
+<li class="nav-item dropdown menu-open">
     <a id="{{ $id }}" {!! $attributes->merge(['class' => 'nav-link']) !!} role="button" data-bs-toggle="dropdown" aria-expanded="false">
         {{ $trigger }}
     </a>
 
-    <div class="dropdown-menu dropdown-menu-end animate slideIn" aria-labelledby="{{ $id }}">
+    <ul class="nav nav-treeview" aria-labelledby="{{ $id }}">
         {{ $content }}
-    </div>
+    </ul>
 </li>

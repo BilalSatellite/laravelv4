@@ -24,5 +24,8 @@
         "sass": "^1.43.5",
         "sass-loader": "^12.3.0",
         "tailwindcss": "^2.2.2"
+    },
+    "dependencies": {
+        "bootstrap-icons": "^1.7.1"
     }
 }

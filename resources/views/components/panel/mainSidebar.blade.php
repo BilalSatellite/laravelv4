@@ -19,8 +19,15 @@
                     <x-ui.icon class="nav-icon bi-person-circle"/>
                     <p>{{ __('My Profile') }}</p>
                 </x-jet-nav-link>
+                <li class="nav-header"><x-ui.icon class="nav-icon bi-tags-fill"/>Users Manage</li>
+                <x-jet-nav-link href="{{ route('users') }}" class="nav-item" :active="request()->routeIs('users')">
+                    <x-ui.icon class="nav-icon bi-person-circle"/>
+                    <p>{{ __('Users') }}</p>
+                </x-jet-nav-link>
+
+
                 <!-- Dropdown Menu-->
-                <x-jet-dropdown id="mainsidebare">
+                {{-- <x-jet-dropdown id="mainsidebare">
                     <x-slot name="trigger">
                             <x-ui.icon class="nav-icon bi-people"/>
                             <p> MULTI LEVEL
@@ -28,9 +35,9 @@
                             </p>
                     </x-slot>
                     <x-slot name="content" class="nav nav-treeview">
-                        <x-jet-nav-link href="{{ route('profile.show') }}">
+                        <x-jet-nav-link href="{{ route('users') }}">
                             <x-ui.icon class="nav-icon bi-person-circle"/>
-                            <p>{{ __('My Profile') }}</p>
+                            <p>{{ __('Users') }}</p>
                         </x-jet-nav-link>
 
                         <x-jet-nav-link href="{{ route('profile.show') }}">
@@ -44,7 +51,7 @@
                         </x-jet-nav-link>
 
                     </x-slot>
-                </x-jet-dropdown>
+                </x-jet-dropdown> --}}
 
 
 

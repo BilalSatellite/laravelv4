@@ -3,10 +3,11 @@
         <!-- Start navbar links -->
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" data-lte-toggle="sidebar-full" href="#" role="button"><x-ui.icon class="bi-text-indent-right" size="1.4rem"/>
-
+                <a class="nav-link" data-lte-toggle="sidebar-full" href="#" role="button">
+                    <x-ui.icon class="bi-text-indent-right" size="1.4rem"/>
                 </a>
             </li>
+
             <li class="nav-item d-none d-md-block">
                 <a href="/" class="nav-link">Home</a>
             </li>

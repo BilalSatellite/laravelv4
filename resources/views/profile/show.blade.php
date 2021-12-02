@@ -1,8 +1,6 @@
 <x-app-layout>
-    <x-slot name="header">
-        <div class="fs-3">{{ __('My Profile') }}</div>
-    </x-slot>
 
+    @section('tital', __('My Profile'))
 
     {{-- <div>
         @if (Laravel\Fortify\Features::canUpdateProfileInformation())

@@ -8,7 +8,7 @@
   color-scheme: dark;
 }
 
-:root {
+/* :root {
   --bs-blue: #375a7f;
   --bs-indigo: #673ab7;
   --bs-purple: #654ea3;
@@ -54,11 +54,11 @@
   --bs-body-color: #e1e1e1;
   --bs-body-bg: #222;
   --bs-gradient: linear-gradient(180deg, rgba(17, 17, 17, 0.15), rgba(17, 17, 17, 0));
-}
+} */
 
 body {
   color: var(--bs-body-color-alt);
-  background-color: var(--bs-body-bg-alt);
+  /* background-color: var(--bs-body-bg-alt); */
 }
 
 hr {
@@ -1064,11 +1064,11 @@ caption {
   border-color: #515151 #515151 #222;
 }
 
-.nav-pills .nav-link.active,
+/* .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fafafa;
   background-color: #375a7f;
-}
+} */
 
 .navbar-toggler {
   background-color: transparent;
@@ -1162,11 +1162,11 @@ caption {
 
 .accordion-button {
   color: #e1e1e1;
-  background-color: #222;
+  background-color: #222222;
 }
 .accordion-button:not(.collapsed) {
   color: #879cb2;
-  background-color: #1c2d40;
+  background-color: #222222;
   box-shadow: inset 0 -1px 0 rgba(250, 250, 250, 0.125);
 }
 .accordion-button:not(.collapsed)::after {

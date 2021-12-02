@@ -101,22 +101,23 @@
          <x-panel.mainSidebar/>
          <!-- Main content -->
          <main class="content-wrapper">
-             <div class="content-header">
+             {{-- <div class="content-header">
                  <div class="container-fluid">
                      <div class="row mb-2">
                          <div class="col-sm-6">
-                            {{ $header }}
+                            <h3 class="page-title">@yield('tital')</h3>
                          </div>
                          <div class="col-sm-6">
                              <ol class="breadcrumb float-sm-end">
-                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                 <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                                 <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                 <li class="breadcrumb-item active" aria-current="page">{{ Route::currentRouteName() }}</li>
                              </ol>
+
                          </div>
                      </div>
                  </div>
-             </div>
-             <div class="content">
+             </div> --}}
+             <div class="content mt-3">
                  <div class="container-fluid ">
                      <!-- Small boxes (Stat box) -->
                      {{ $slot }}

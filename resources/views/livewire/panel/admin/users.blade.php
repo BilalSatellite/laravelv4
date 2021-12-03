@@ -29,23 +29,23 @@
                     <div class="card-body">
                       <table class="table table-bordered">
                         <thead>
-                          <tr>
+                          {{-- <tr>
                             <th style="width: 10px">Id</th>
                             <th>Name</th>
                             <th>E-Mail</th>
                             <th style="width: 200px">Action</th>
-                          </tr>
+                          </tr> --}}
+                          @foreach ($headers as $key => $value)
+                            <th  style="cursor: pointer" wire:click="sort('{{ $key }}')">
+                                @if($sortColumn == $key)
+                                    <span>{!! $sortDirection == 'asc' ? '&#8659;':'&#8657;' !!}</span>
+                                @endif
+                                {{ is_array($value) ? $value['label'] : $value }}
+                            </th>
+                         @endforeach
                         </thead>
                         <tbody>
-                            {{-- @foreach ($data as $item )
-                          <tr>
-                                <td>{{ $item->id }}</td>
-                                <td>{{ $item->name }}</td>
-                                <td> {{ $item->email }}</td>
-                                <td>Action</td>
-                          </tr>
-                          @endforeach --}}
-                          @if ($data->count())
+                          {{-- @if ($data->count())
                           @foreach ($data as $item)
                               <tr>
                                   <td class="px-6 py-2">{{ $item->id }}</td>
@@ -65,22 +65,27 @@
                           <tr>
                               <td class="px-6 py-4 text-sm whitespace-no-wrap" colspan="4">No Results Found</td>
                           </tr>
-                      @endif
+                      @endif --}}
+                      @if(count($data))
+                      @foreach ($data as $item)
+                          <tr>
+                              @foreach ($headers as $key => $value)
+                                  <td>
+                                      {!! is_array($value) ? $value['func']($item->$key) : $item->$key !!}
+                                  </td>
+                              @endforeach
+                          </tr>
+                      @endforeach
+                  @else
+                      <tr><td colspan="{{ count($headers) }}"><h2>No Results Found!</h2></td></tr>
+                  @endif
 
                         </tbody>
                       </table>
                     </div>
                     <!-- /.card-body -->
                     <div class="card-footer clearfix">
-                        {{-- {{ $data->links() }} --}}
-                        {{ $data->links('vendor.pagination.bootstrap-4') }}
-                      {{-- <ul class="pagination pagination-sm m-0 float-right">
-                        <li class="page-item"><a class="page-link" href="#">«</a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">»</a></li>
-                      </ul> --}}
+                        {{ $data->links('panel.ui.pagination') }}
                     </div>
                   </div>
             </div>
